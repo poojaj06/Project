@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+  
+</head>
+<body>
+    <div class="box">
+        Dear Customer, Your OTP for registration is <span id="otp"> </span>
+    </div>
+    <br />
+    <button type="button" onclick="generateOTP()"> Generate OTP</button>
+    
+    <script>
+        function generateOTP() {
+
+            var digits = '0123456789';
+            let OTP = '';
+            for (let i = 0; i < 4; i++) {
+                OTP += digits[Math.floor(Math.random() * 10)];
+            }
+            document.getElementById('otp').innerHTML = OTP;
+        }
+    </script>
+</body>
+</html>
